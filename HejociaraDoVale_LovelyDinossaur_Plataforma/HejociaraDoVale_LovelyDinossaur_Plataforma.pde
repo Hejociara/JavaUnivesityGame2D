@@ -2,7 +2,7 @@ int countImages = 10;
 int count =0;
 int largura = 800;
 int altura = 600;
-int andarEmY = 0;
+int andarEmY = 1;
 PImage[] ImagemDeFundo = new PImage[1];
 PImage[] imagem;
 
@@ -22,16 +22,14 @@ public void setup(){
 
 void draw(){
   image(ImagemDeFundo[0],0,0,800,600);
-  if (count < countImages){
-    image(imagem[count++], count * 10,(andarEmY),100,100);
-  }else if(count == countImages){
-    image(imagem[countImages-1],(largura/2)-50,(andarEmY)-50,100,100);
-  }
-    
+  image(imagem[0],0,andarEmY,100,50); 
 }
 void keyPressed(){
-  if (key == 'w'|| key == 'W'){
-    andarEmY *= 10;
+  if (key == CODED) {
+    if (keyCoded == UP){
+  }
+  if (key == 's'|| key == 's'){
+    andarEmY += 10;
   
   }
-}
+}   
